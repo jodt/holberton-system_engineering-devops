@@ -1,3 +1,2 @@
 #!/bin/bash
-cd /temp/
-touch my_first_directory
+mkdir /temp/my_first_directory
