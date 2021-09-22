@@ -1,0 +1,3 @@
+#!/bin/bash
+cd /temp
+touch my_first_directory
