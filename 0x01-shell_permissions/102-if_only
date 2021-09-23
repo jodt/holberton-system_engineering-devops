@@ -1,2 +1,2 @@
 #!/bin/bash
-if [stat -c hello ="guillaume"]; then su vincent fi 
+if [stat -c hello ="guillaume"] then su vincent fi 
