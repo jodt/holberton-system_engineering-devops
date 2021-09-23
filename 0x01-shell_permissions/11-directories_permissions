@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod og+x ./d*
+chmod 755 ./d*
