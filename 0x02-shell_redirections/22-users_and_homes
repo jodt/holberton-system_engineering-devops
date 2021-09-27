@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -f 0,6,7,8 -d | ls -1
+cut -f 0,6,7,8 -d: /etc/passwd| ls -1
