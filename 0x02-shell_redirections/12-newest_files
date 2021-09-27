@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -newer | tail
+find . -type f -cnewer | tail
