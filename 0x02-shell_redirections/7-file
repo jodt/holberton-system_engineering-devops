@@ -1,2 +1,2 @@
 #!/bin/bash
-echo Best School | mkdir \\\*\\\\\'\"Best School\"\\\'\\\\\*\$\\\?\\\*\\\*\\\*\\\*\\\*\:\)
+echo best School | touch \\*\\\'\"Best School\"\\'\\\*\$\\?\\*\\*\\*\\*\\*:\)
