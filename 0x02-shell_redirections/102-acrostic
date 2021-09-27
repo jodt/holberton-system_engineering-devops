@@ -1,2 +1,2 @@
 #!/bin/bash
-cut -c 1 phrase | tr -d "\n" && echo -e
+cut -c 1 | tr -d "\n" | printf "\n"
