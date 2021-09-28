@@ -1,2 +1,2 @@
 #!/bin/bash
-cat -n | tr " " "\0" | grep "^[0-9]*[13579]$"
+cat -n | grep '$[13579]\t' | cut -f2
