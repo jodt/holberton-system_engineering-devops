@@ -10,7 +10,6 @@ function handlesig()
 {
     echo "I hate the kill command"
     rm -f pid
-    exit
 }
 while 'true'
 do
