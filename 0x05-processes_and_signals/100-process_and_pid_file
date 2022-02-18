@@ -9,7 +9,7 @@ echo $$ > /var/run/my.pid
 function handlesig()
 {
     echo "I hate the kill command"
-    rm pid
+    rm /var/run/my.pid
     exit
 }
 while 'true'
