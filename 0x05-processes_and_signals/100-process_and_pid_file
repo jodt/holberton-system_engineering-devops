@@ -5,11 +5,11 @@
 # Displays I hate the kill command when receiving a SIGTERM signal
 # Displays Y U no love me?! when receiving a SIGINT signal
 # Deletes the file /var/run/my.pid and terminates itself when receiving a SIGQUIT or SIGTERM signal
-echo $$ > /var/run/my.pid
+echo $$ > pid
 function handlesig()
 {
     echo "I hate the kill command"
-    rm -f /var/run/my.pid
+    rm -f pid
     exit
 }
 while 'true'
@@ -17,5 +17,5 @@ do
         echo "To infinity and beyond"
         sleep 2
         trap "echo Y U no love me?!" 2
-        trap handlesig 3 15
+        trap handlesig EXIT
 done        
