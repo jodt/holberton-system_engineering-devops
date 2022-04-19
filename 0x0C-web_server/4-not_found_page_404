@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # configures Nginx server to have a custom 404 page
 
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get -y install nginx
-sudo bash -c 'echo Hello World > /var/www/html/index.nginx-debian.html'
-sudo sed -i '/^\s*server_name \_\;$/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-enabled/default
-sudo bach -c  "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
-sudo sed -i '/^\s*server_name \_\;$/a error_page 404/custom_404.html; \\n location = \custom_404.html { root /usr/share/nginx/html;internal}'/ etc/nginx/sites-enabled/default
-sudo service nginx restart
+apt-get -y update
+apt-get -y upgrade
+apt-get -y install nginx
+bash -c 'echo Hello World > /var/www/html/index.nginx-debian.html'
+sed -i '/^\s*server_name \_\;$/a rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-enabled/default
+bach -c  "Ceci n'est pas une page" | tee /usr/share/nginx/html/custom_404.html
+sed -i '/^\s*server_name \_\;$/a error_page 404/custom_404.html; \\n location = \custom_404.html { root /usr/share/nginx/html;internal}'/ etc/nginx/sites-enabled/default
+service nginx restart
