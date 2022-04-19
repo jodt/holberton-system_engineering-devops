@@ -2,4 +2,4 @@
 #install nginx web server
 apt-get -y install nginx
 bash -c 'echo Hello World > /var/www/html/index.nginx-debian.html'
-service nginx restart
+service nginx reload
