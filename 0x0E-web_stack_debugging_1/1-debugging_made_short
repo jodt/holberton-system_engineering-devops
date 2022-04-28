@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 #script that fix bug
-sudo ln -s -f /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo service nginx restart
+ln -s -f /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx restart
 pkill -1 nginx
