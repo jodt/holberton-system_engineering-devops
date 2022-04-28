@@ -7,6 +7,6 @@ if [ "$#" -lt 1 ];
         dig web-01.joeldumortier.tech | grep -A1 'ANSWER SECTION' | tail -n +2 | awk '{print "The subdomain web-01 is a " $4 " record and points to "$5}';
         dig web-02.joeldumortier.tech | grep -A1 'ANSWER SECTION' | tail -n +2 | awk '{print "The subdomain web-02 is a " $4 " record and points to "$5}';
     else
-        SUB=$1
-        dig "$1".joeldumortier.tech | grep -A1 'ANSWER SECTION' | tail -n +2 | awk -v s="$SUB" '{print "The subdomain "s " is a " $4 " record and points to "$5}';
+        SUB=$2
+        dig "$2"."$1" | grep -A1 'ANSWER SECTION' | tail -n +2 | awk -v s="$SUB" '{print "The subdomain "s " is a " $4 " record and points to "$5}';
 fi
