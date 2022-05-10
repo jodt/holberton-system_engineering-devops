@@ -7,4 +7,4 @@ MYSQL_USER="root"
 MYSQL_PASSWORD=$1
 
 mysqldump --user "$MYSQL_USER" --password "$MYSQL_PASSWORD" --all-databases > backup.sql;
-tar -czf "$TODAY.tar.gz" backup.sql;
+tar -cvzf "$TODAY.tar.gz" backup.sql;
