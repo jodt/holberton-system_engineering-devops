@@ -19,7 +19,7 @@ if __name__ == '__main__':
     userInfos = r.json()[0]
     numberoftasks = r2.json()
     doneTasks = r3.json()
-    print('Employee {} is done with tasks ({}/{}):'.format(
+    print('Employee {} is done with tasks({}/{}):'.format(
         userInfos.get('name'), len(doneTasks), len(numberoftasks)))
     for task in doneTasks:
         print("\t {}".format(task.get('title')))
