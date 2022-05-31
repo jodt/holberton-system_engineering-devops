@@ -30,4 +30,4 @@ def recurse(subreddit, hot_list=[], after=''):
             hotlist.append(post['data']['title'])
         return hot_list
     except Exception:
-        print(None)
+        return None
