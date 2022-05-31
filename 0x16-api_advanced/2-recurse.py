@@ -16,7 +16,6 @@ def recurse(subreddit, hot_list=[], after=''):
     params = {}
     params['after'] = after
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
-    result = []
     try:
         response = requests.get(
             url, headers=headers, params=params, allow_redirects=False)
@@ -24,7 +23,7 @@ def recurse(subreddit, hot_list=[], after=''):
         after_key = jsonreponse['data']['after']
         if after_key is None:
             for post in (jsonreponse['data']['children']):
-                result.append(post['data']['title'])
+                hot_list.append(post['data']['title'])
                 return hot_list
         hot_list = recurse(subreddit, hot_list, after_key)
         for post in (jsonreponse['data']['children']):
