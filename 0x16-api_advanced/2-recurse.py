@@ -24,10 +24,10 @@ def recurse(subreddit, hot_list=[], after=''):
         if after_key is None:
             for post in (jsonreponse['data']['children']):
                 hot_list.append(post['data']['title'])
-                return hot_list
-        hot_list = recurse(subreddit, hot_list, after_key)
+            return hot_list
+        hotlist = recurse(subreddit, hot_list, after_key)
         for post in (jsonreponse['data']['children']):
-            hot_list.append(post['data']['title'])
+            hotlist.append(post['data']['title'])
         return hot_list
     except Exception:
         print(None)
